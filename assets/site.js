@@ -27,6 +27,23 @@
     window.history.replaceState({}, "", url.pathname + "?" + url.searchParams.toString() + url.hash);
   }
 
+  function syncInternalLanguageLinks(language) {
+    document.querySelectorAll("a[href]").forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (!href || /^(?:[a-z]+:|#|\/\/)/i.test(href)) {
+        return;
+      }
+
+      var target = new URL(href, window.location.href);
+      if (target.origin !== window.location.origin) {
+        return;
+      }
+
+      target.searchParams.set("lang", language);
+      link.setAttribute("href", target.pathname + "?" + target.searchParams.toString() + target.hash);
+    });
+  }
+
   function setLanguage(language, updateQuery) {
     language = language === "en" ? "en" : "ko";
     root.dataset.language = language;
@@ -40,6 +57,8 @@
     panels.forEach(function (panel) {
       panel.hidden = panel.dataset.languagePanel !== language;
     });
+
+    syncInternalLanguageLinks(language);
 
     if (updateQuery) {
       syncLanguageQuery(language);
