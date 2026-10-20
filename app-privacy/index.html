@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="데이닷 App Store Connect 개인정보 라벨 검토용 데이터 수집 요약입니다. 실제 제출 전 검토용 문서입니다.">
+  <link rel="canonical" href="https://jhl1214.github.io/daydot-support/app-privacy/">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/site.js" defer></script>
+  <title>앱 개인정보 요약 · 데이닷</title>
+</head>
+<body>
+  <a class="skip-link" href="#main"><span class="copy-ko">본문으로 건너뛰기</span><span class="copy-en">Skip to content</span></a>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="데이닷 홈"><span class="brand-mark" aria-hidden="true">d</span><span>데이닷 <span class="copy-en">· daydot</span></span></a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="../support/"><span class="copy-ko">지원</span><span class="copy-en">Support</span></a>
+      <a href="../privacy/"><span class="copy-ko">개인정보</span><span class="copy-en">Privacy</span></a>
+      <a href="./" aria-current="page"><span class="copy-ko">앱 개인정보 요약</span><span class="copy-en">App Privacy</span></a>
+      <span class="language-switch" aria-label="언어 선택 / Language">
+        <button type="button" data-language-button="ko" aria-pressed="true">한국어</button>
+        <button type="button" data-language-button="en" aria-pressed="false">English</button>
+      </span>
+    </nav>
+  </header>
+
+  <main id="main" class="page-shell">
+    <div class="page-heading">
+      <div class="language-panel" data-language-panel="ko">
+        <p class="eyebrow">APP PRIVACY · 검토용</p>
+        <h1>스토어 라벨을 위한<br>보수적인 데이터 목록.</h1>
+        <p class="lead">현재 앱 구성에서 수집될 수 있는 데이터를 App Store Connect에 검토할 때 사용할 작업용 요약입니다.</p>
+        <div class="page-meta"><span>현재 버전: 1.0</span><span>기준일: 2026년 10월 20일</span></div>
+      </div>
+      <div class="language-panel" data-language-panel="en">
+        <p class="eyebrow">APP PRIVACY · REVIEW GUIDE</p>
+        <h1>A conservative list<br>for store labels.</h1>
+        <p class="lead">A working summary for reviewing what the current app configuration may collect in App Store Connect.</p>
+        <div class="page-meta"><span>Current version: 1.0</span><span>As of: October 20, 2026</span></div>
+      </div>
+    </div>
+
+    <article class="article">
+      <div class="language-panel" data-language-panel="ko">
+        <div class="callout copper-callout"><strong>App Store Connect 실제 제출문이 아닙니다.</strong> 이 페이지는 제출 전 검토용 제안 목록입니다. 최종 제출 전 실제 컴파일된 SDK 매니페스트, Firebase 설정, Google UMP·AdMob 설정과 앱의 현재 흐름을 확인해 데이터 유형·연결 여부·용도를 다시 판정해야 합니다. 앱스토어 등록 ID는 이 문서에 포함하지 않습니다.</div>
+
+        <h2>수집 여부</h2>
+        <p><span class="status-chip">Data Collected · Yes</span></p>
+        <p>Firebase Analytics와 Google Mobile Ads가 처리할 수 있는 앱·기기·광고·진단 신호가 있으므로 데이터 수집 여부는 <strong>예</strong>로 검토합니다. 일기 기록과 사진은 앱의 기본 동작에서 서버로 자동 수집하지 않지만, 이것이 SDK 처리까지 없다는 뜻은 아닙니다.</p>
+
+        <h2>추가 검토가 필요한 데이터 유형</h2>
+        <p><span class="status-chip copper">Potentially linked · category review</span></p>
+        <p>아래는 현재 구성에서 누락을 피하기 위한 보수적인 후보입니다. Apple의 ‘사용자와 연결된 데이터’ 항목은 각 서비스가 실제로 어떤 필드와 연결하는지 최종 SDK 매니페스트와 광고 설정을 확인해 확정하세요. GMA 13.11.0 SDK 매니페스트를 확인한 결과도 함께 적었지만, 이 vendor 플래그가 곧바로 최종 Apple 라벨을 확정하는 것은 아닙니다.</p>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>데이터 유형</th><th>현재 구성에서 가능한 신호</th><th>검토할 용도</th><th>GMA 13.11.0 manifest</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Device ID</strong></td><td>Firebase 앱 인스턴스 ID, 광고 SDK 또는 개발자 범위 식별자 후보. 앱은 IDFA를 요청하거나 사용하도록 구성하지 않음.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=true · tracking=true</td></tr>
+              <tr><td><strong>Coarse Location</strong></td><td>IP에서 파생된 대략적인 지역 또는 광고 SDK의 대략적인 위치 신호일 수 있음.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=true · tracking=false</td></tr>
+              <tr><td><strong>Product Interaction</strong></td><td>화면·기능 이벤트, 사진 보유 여부, 광고 노출·클릭과 앱 기능 상호작용.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=true · tracking=false</td></tr>
+              <tr><td><strong>Advertising Data</strong></td><td>비개인맞춤 광고 요청, 노출·클릭 및 성과 측정 신호.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=true · tracking=false</td></tr>
+              <tr><td><strong>Crash Data</strong></td><td>앱 또는 SDK 충돌과 관련된 진단 정보.</td><td>Analytics</td><td>linked=false · tracking=false</td></tr>
+              <tr><td><strong>Performance Data</strong></td><td>앱·SDK 성능과 세션 품질을 위한 측정 정보.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=false · tracking=false</td></tr>
+              <tr><td><strong>Other Diagnostic Data</strong></td><td>앱·SDK 동작, 광고 요청과 관련된 기타 진단 정보.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=false · tracking=false</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="notice">GMA 매니페스트의 <strong>Device ID linked=true · tracking=true</strong>는 앱의 no ATT prompt, no IDFA permission request, <code>npa=1</code>, publisher first-party ID false 구성과 구분해야 합니다. 매 실행에서 UMP 상태를 확인하고 Google의 지역별 판단에 따라 해당 개인정보 메시지와 선택사항을 제공하며, 광고 요청은 <code>canRequestAds</code>가 허용할 때만 수행하지만, 이 사실만으로 Apple의 Tracking 답변을 확정하지 않습니다. 실제 제공자 수집과 최종 컴파일 릴리스를 다시 확인하세요. ‘Developer Advertising’은 매니페스트·스토어 라벨의 용도 이름이며, 데이닷이 자체 마케팅 캠페인을 운영한다는 뜻은 아닙니다.</p>
+
+        <h2>Tracking 검토</h2>
+        <p><span class="status-chip copper">Tracking · 최종 판정 전 재검토</span></p>
+        <p>앱 구성은 비개인맞춤 광고 요청, publisher first-party ID 비활성화, ATT 추적 권한 요청 없음, IDFA 권한 요청 없음이지만, 확인된 GMA 매니페스트는 Device ID를 <code>tracking=true</code>로 보고합니다. 이 불일치를 해소하기 전에는 Tracking No를 확정된 값처럼 표시하지 않습니다. 실제 SDK 수집·Apple의 Tracking 정의·최종 컴파일 릴리스와 UMP의 지역별 메시지·선택사항을 제출 직전에 함께 확인한 뒤, 근거가 있으면 No로 갱신하고 그렇지 않으면 실제 결과에 맞게 신고하세요.</p>
+
+        <h2>앱의 저널 흐름에서 자동 전송하지 않는 콘텐츠</h2>
+        <p>현재 앱 흐름은 다음 콘텐츠를 일기 기능의 Analytics·광고 이벤트로 자동 전송하지 않도록 설계되어 있습니다. 이는 SDK가 모든 데이터를 미연결·익명으로 처리한다는 선언이 아닙니다.</p>
+        <ul>
+          <li><strong>Photos</strong>: PhotosPicker에서 사용자가 선택한 사진은 기기 내 기록에 사용하며 자동 업로드하지 않습니다.</li>
+          <li><strong>Other User Content</strong>: 제목·메모·사진·날짜·검색어는 Analytics 이벤트에 넣지 않습니다.</li>
+          <li><strong>Contacts</strong>: 연락처를 읽거나 업로드하지 않습니다.</li>
+          <li><strong>Precise Location</strong>: 정밀 위치 권한을 요청하지 않습니다.</li>
+          <li><strong>Financial or Health</strong>: 금융·건강 데이터를 수집 목적의 서버 필드로 만들지 않습니다.</li>
+        </ul>
+        <p class="notice">이 목록은 앱의 기본 흐름에 대한 설명입니다. 사용자가 앱 밖에서 운영자에게 직접 이메일을 보내거나 공개 GitHub 이슈에 내용을 입력하면 Support Email 또는 Other User Content가 제공될 수 있습니다. Apple의 고객 지원 관련 선택적 공개 예외에 해당할 수 있는지 최종 제출 시 별도로 검토하고, 지원 흐름이 앱 안으로 바뀌거나 내용이 달라지면 이를 근거로 보편적인 ‘수집하지 않음’을 유지하지 마세요.</p>
+
+        <h2>용어와 공식 참고 자료</h2>
+        <p>이 페이지의 분류는 Apple의 App Privacy 질문과 현재 SDK 구성을 함께 검토하기 위한 초안입니다. 실제 공개 값은 최신 Apple 안내, 컴파일 결과와 앱 설정에 따라 정합니다.</p>
+        <ul class="source-list">
+          <li><a href="https://developer.apple.com/app-store/app-privacy-details/">Apple App privacy details</a></li>
+          <li><a href="https://firebase.google.com/support/privacy">Firebase 개인정보 보호 및 보안</a></li>
+          <li><a href="https://firebase.google.com/docs/analytics/learn-more">Firebase Analytics 수집 안내</a></li>
+          <li><a href="https://developers.google.com/admob/ios/privacy/data-disclosure">Google AdMob iOS 데이터 공개 안내</a></li>
+          <li><a href="https://policies.google.com/privacy">Google 개인정보처리방침</a></li>
+          <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 개인정보처리방침</a></li>
+        </ul>
+
+        <h2>광고·app-ads.txt 확인 범위</h2>
+        <p>광고 SDK를 코드에 구성하는 일, App Store Connect의 개인정보 라벨을 제출하는 일, AdMob의 앱 심사와 광고 ID 설정, <code>app-ads.txt</code>의 실제 크롤러 확인은 서로 다른 작업입니다. 이 저장소에는 확인용 <code>app-ads.txt</code>가 있지만, 라이브 호스트 위치와 AdMob 크롤러의 검증 상태는 별도로 확인해야 합니다.</p>
+      </div>
+
+      <div class="language-panel" data-language-panel="en">
+        <div class="callout copper-callout"><strong>This is not the actual App Store Connect submission.</strong> It is a proposed pre-submission review list. Before final submission, check the compiled SDK manifests, Firebase settings, Google UMP/AdMob settings, and every current app flow to confirm data types, linkage, and purposes. No App Store listing ID is included here.</div>
+
+        <h2>Data collected</h2>
+        <p><span class="status-chip">Data Collected · Yes</span></p>
+        <p>Firebase Analytics and Google Mobile Ads may process app, device, advertising, and diagnostic signals, so review the collection answer as <strong>Yes</strong>. Journal records and photos are not automatically collected by the app’s core flow to a server, but that does not mean the SDKs process no data.</p>
+
+        <h2>Data types to review conservatively</h2>
+        <p><span class="status-chip copper">Potentially linked · category review</span></p>
+        <p>The following are conservative candidates intended to avoid omissions. For Apple’s “Data Linked to You” question, confirm actual fields and linkage against the final SDK manifests and ad settings. The verified GMA 13.11.0 manifest flags are included, but a vendor flag does not by itself settle the final Apple label.</p>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Data type</th><th>Possible signal in the current setup</th><th>Purposes to review</th><th>GMA 13.11.0 manifest</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Device ID</strong></td><td>Firebase app-instance ID and advertising or developer-scoped identifiers. IDFA is not requested or configured for use.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=true · tracking=true</td></tr>
+              <tr><td><strong>Coarse Location</strong></td><td>Approximate region derived from IP or a coarse location signal used by an ad SDK.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=true · tracking=false</td></tr>
+              <tr><td><strong>Product Interaction</strong></td><td>Screen/feature events, whether an entry has a photo, ad impressions/clicks, and app interactions.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=true · tracking=false</td></tr>
+              <tr><td><strong>Advertising Data</strong></td><td>Non-personalized ad requests, impressions, clicks, and measurement signals.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=true · tracking=false</td></tr>
+              <tr><td><strong>Crash Data</strong></td><td>Crash information associated with the app or an SDK.</td><td>Analytics</td><td>linked=false · tracking=false</td></tr>
+              <tr><td><strong>Performance Data</strong></td><td>App and SDK performance or session-quality measurements.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=false · tracking=false</td></tr>
+              <tr><td><strong>Other Diagnostic Data</strong></td><td>Other diagnostic information related to app/SDK behavior and ad requests.</td><td>Third-party Advertising · Developer Advertising · Analytics</td><td>linked=false · tracking=false</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="notice">The GMA manifest reports <strong>Device ID linked=true · tracking=true</strong>. Keep that vendor flag separate from the app’s no ATT prompt, no IDFA permission request, <code>npa=1</code>, and publisher first-party ID false configuration. On each launch, UMP checks its state and Google determines by region whether a privacy message and choices apply; ad requests run only when <code>canRequestAds</code> permits them, but these facts do not settle Apple’s Tracking answer. “Developer Advertising” is a manifest/store-purpose name; daydot does not run its own marketing campaigns.</p>
+
+        <h2>Tracking review</h2>
+        <p><span class="status-chip copper">Tracking · final review required</span></p>
+        <p>The app configuration uses non-personalized ad requests, publisher first-party ID disabled, no ATT tracking permission request, and no IDFA permission request, while the verified GMA manifest reports Device ID as <code>tracking=true</code>. Do not publish Tracking No as a confirmed value until this mismatch is resolved. Verify actual SDK collection, Apple’s Tracking definition, the final compiled release, and the region-specific UMP messages and choices immediately before submission; then update the label to No only when the evidence supports it, or report the result that the final flow requires.</p>
+
+        <h2>Content not automatically sent by the journal flow</h2>
+        <p>The current app flow is designed not to send these categories in its journal Analytics or advertising events. This is not a claim that every SDK signal is unlinked or anonymous.</p>
+        <ul>
+          <li><strong>Photos</strong>: PhotosPicker selections are used for on-device entries and are not automatically uploaded.</li>
+          <li><strong>Other User Content</strong>: Titles, memos, photos, dates, and search terms are excluded from Analytics events.</li>
+          <li><strong>Contacts</strong>: Contacts are not read or uploaded.</li>
+          <li><strong>Precise Location</strong>: The app does not request precise-location permission.</li>
+          <li><strong>Financial or Health</strong>: The app does not create server fields to collect financial or health data.</li>
+        </ul>
+        <p class="notice">This describes the default in-app flow. If a user emails the operator directly or enters content in a public GitHub Issue, Support Email or Other User Content may be provided off-app. Review separately whether Apple’s optional customer-support disclosure exception applies, and update the submission if the support flow moves into the app or changes. Do not rely on a universal “not collected” claim.</p>
+
+        <h2>Terms and official references</h2>
+        <p>This page is a draft for reconciling Apple’s App Privacy questions with the current SDK configuration. Set final values from the latest Apple guidance, compiled results, and app settings.</p>
+        <ul class="source-list">
+          <li><a href="https://developer.apple.com/app-store/app-privacy-details/">Apple App privacy details</a></li>
+          <li><a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a></li>
+          <li><a href="https://firebase.google.com/docs/analytics/learn-more">What Google Analytics for Firebase collects</a></li>
+          <li><a href="https://developers.google.com/admob/ios/privacy/data-disclosure">Google AdMob iOS data disclosure</a></li>
+          <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+          <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></li>
+        </ul>
+
+        <h2>Advertising and app-ads.txt scope</h2>
+        <p>Configuring an ad SDK in code, submitting App Store Connect privacy labels, completing AdMob app review and ad-ID settings, and verifying the live <code>app-ads.txt</code> crawler location are separate tasks. This repository includes an <code>app-ads.txt</code> copy for review; its live host location and AdMob crawler status need separate verification.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Lee Junho · <span class="copy-ko">데이닷 공식 지원</span><span class="copy-en">Official daydot support</span></p>
+    <div class="footer-links">
+      <a href="../"><span class="copy-ko">홈</span><span class="copy-en">Home</span></a>
+      <a href="../support/"><span class="copy-ko">지원</span><span class="copy-en">Support</span></a>
+      <a href="../privacy/"><span class="copy-ko">개인정보</span><span class="copy-en">Privacy</span></a>
+    </div>
+  </footer>
+</body>
+</html>

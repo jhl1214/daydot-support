@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="데이닷 개인정보처리방침 · 기기 내 기록, 선택적 공유, Firebase Analytics와 Google Mobile Ads 데이터 처리 안내입니다.">
+  <link rel="canonical" href="https://jhl1214.github.io/daydot-support/privacy/">
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/site.js" defer></script>
+  <title>개인정보처리방침 · 데이닷</title>
+</head>
+<body>
+  <a class="skip-link" href="#main"><span class="copy-ko">본문으로 건너뛰기</span><span class="copy-en">Skip to content</span></a>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="데이닷 홈"><span class="brand-mark" aria-hidden="true">d</span><span>데이닷 <span class="copy-en">· daydot</span></span></a>
+    <nav class="site-nav" aria-label="주요 메뉴">
+      <a href="../support/"><span class="copy-ko">지원</span><span class="copy-en">Support</span></a>
+      <a href="./" aria-current="page"><span class="copy-ko">개인정보</span><span class="copy-en">Privacy</span></a>
+      <a href="../app-privacy/"><span class="copy-ko">앱 개인정보 요약</span><span class="copy-en">App Privacy</span></a>
+      <span class="language-switch" aria-label="언어 선택 / Language">
+        <button type="button" data-language-button="ko" aria-pressed="true">한국어</button>
+        <button type="button" data-language-button="en" aria-pressed="false">English</button>
+      </span>
+    </nav>
+  </header>
+
+  <main id="main" class="page-shell">
+    <div class="page-heading">
+      <div class="language-panel" data-language-panel="ko">
+        <p class="eyebrow">PRIVACY · 개인정보</p>
+        <h1>기록은 기기에,<br>선택은 사용자에게.</h1>
+        <p class="lead">데이닷이 어떤 기록을 어디에서 처리하는지, 그리고 분석·광고·공유를 선택할 때 무엇이 달라지는지 설명합니다.</p>
+        <div class="page-meta"><span>시행일: 2026년 10월 20일</span><span>운영자: Lee Junho</span></div>
+      </div>
+      <div class="language-panel" data-language-panel="en">
+        <p class="eyebrow">PRIVACY · DATA CHOICES</p>
+        <h1>Your records stay close.<br>Your choices stay clear.</h1>
+        <p class="lead">This policy explains where daydot processes journal records and what changes when you choose analytics, advertising, or sharing.</p>
+        <div class="page-meta"><span>Effective: October 20, 2026</span><span>Operator: Lee Junho</span></div>
+      </div>
+    </div>
+
+    <article class="article">
+      <div class="language-panel" data-language-panel="ko">
+        <div class="callout copper-callout"><strong>읽기 안내.</strong> 이 방침은 현재 데이닷 앱의 기록·분석·광고 구성을 설명합니다.</div>
+        <nav class="policy-map" aria-label="정책 목차">
+          <a href="#local-ko">1. 기기 내 기록</a>
+          <a href="#backup-ko">2. OS 백업</a>
+          <a href="#photos-ko">3. 사진·알림·공유</a>
+          <a href="#network-ko">4. 계정·서버 처리</a>
+          <a href="#analytics-ko">5. Firebase Analytics</a>
+          <a href="#ads-ko">6. 광고와 UMP</a>
+          <a href="#providers-ko">7. 제공자와 해외 처리</a>
+          <a href="#retention-ko">8. 보유와 삭제</a>
+          <a href="#contact-ko">9. 문의와 권리</a>
+          <a href="#changes-ko">10. 변경</a>
+        </nav>
+
+        <h2 id="local-ko">1. 기기 내 기록</h2>
+        <p>데이닷은 사진과 짧은 글을 남기는 일기 앱입니다. 제목, 메모, 날짜, 연간 반복 여부, 리마인더 설정, 책갈피와 사용자가 고른 사진은 기본적으로 사용자의 기기 안에 JSON 데이터와 사진 파일로 저장됩니다. 기록을 만들고, 수정하고, 삭제하고, 연도·책갈피로 다시 보는 기능은 앱의 로컬 저장소를 사용합니다.</p>
+        <p>데이닷은 앱 계정을 만들지 않으며, 일기 기록을 운영자 서버에 자동으로 백업하거나 서버와 동기화하지 않습니다. 따라서 운영자가 기기 안의 기록을 원격으로 열람·복원·삭제할 수 없습니다.</p>
+
+        <h2 id="backup-ko">2. iOS 기기 백업</h2>
+        <p>iOS의 기기 백업 기능을 사용하면 사용자의 Apple 설정과 백업 방식에 따라 앱 데이터가 시스템 백업에 포함될 수 있습니다. 이는 데이닷의 서버 백업이나 앱 계정 기능이 아닙니다. 앱에서 기록을 지우거나 앱을 제거해도 이미 생성된 iOS 백업, 사용자가 내보낸 파일과 사진, 다른 서비스가 보관한 공유 사본까지 자동으로 삭제되지는 않습니다. 백업과 저장 공간은 Apple 기기·계정 설정에서 관리해 주세요.</p>
+
+        <h2 id="photos-ko">3. 사진·알림·공유</h2>
+        <h3>사진 선택과 저장</h3>
+        <p>기록에 추가하는 사진은 iOS 시스템 PhotosPicker에서 사용자가 선택한 항목만 가져옵니다. 앱은 사진 보관함 전체를 자동으로 읽거나 기록 전체를 사진 서비스로 보내지 않습니다. 사용자가 완성한 사진 카드를 사진 보관함에 저장하는 기능을 선택하면 선택적 사진 추가 권한을 요청할 수 있습니다. 이 권한은 저장 기능을 위한 것이며, 허용하지 않아도 사진 없이 기록하거나 기존 기록을 볼 수 있습니다.</p>
+        <h3>로컬 알림</h3>
+        <p>리마인더는 선택적 iOS 로컬 알림입니다. 알림 권한을 허용하지 않거나 설정에서 끄더라도 일기 기록은 저장됩니다. 알림 내용과 예약은 사용자의 기기에서 처리되며, 데이닷 서버로 전송하는 푸시 알림 기능을 제공하지 않습니다.</p>
+        <h3>사용자가 선택한 공유</h3>
+        <p>사용자가 공유 버튼을 누르고 대상을 선택하면 선택한 사진 카드가 iOS 공유 시트를 통해 그 서비스로 전달될 수 있습니다. 선택한 서비스는 자체 개인정보처리방침과 보관 설정에 따라 자료를 처리합니다. 데이닷은 사용자의 선택 없이 기록·사진을 업로드하거나 공유하지 않습니다.</p>
+
+        <h2 id="network-ko">4. 앱 계정과 서버 처리</h2>
+        <p>데이닷에는 앱 로그인, 앱 계정, Firebase Authentication, Firebase Storage, Firestore 기반의 일기 백업·동기화가 없습니다. 일반 기록과 사진은 이 이유로 운영자 서버에 자동 전송되지 않습니다.</p>
+        <p>지원이 필요할 때 사용자가 선택할 수 있는 경로는 공개 GitHub Issue 또는 직접 이메일입니다. GitHub Issue는 공개 글이므로 사용자가 글에 입력한 정보가 GitHub와 공개 인터넷에 게시됩니다. 문의를 위한 별도 앱 백엔드나 자동 진단 업로드는 없습니다. 공개 글에 사진, 일기·메모 내용, 이메일, 계좌번호, 거래 내역 또는 기기 백업을 올리지 마세요.</p>
+
+        <h2 id="analytics-ko">5. Firebase Analytics</h2>
+        <p>앱의 화면과 기능이 어떻게 사용되는지, 그리고 기본 품질을 개선하기 위해 Firebase Analytics SDK 13.0.1을 사용합니다. 앱은 화면·기능 이벤트를 명시적으로 기록하며, 이벤트에는 기능의 카테고리와 해당 기록에 사진이 있는지 여부(<code>has_photo</code>) 같은 제한된 값이 포함될 수 있습니다.</p>
+        <p>분석 이벤트에 일기 메모·제목, 사진, 날짜, UUID, 검색어와 사용자 ID를 넣지 않습니다. 다만 Firebase 및 기기 운영체제·SDK가 앱 인스턴스 식별자, 앱·기기·세션 정보, IP에서 파생된 대략적인 지역 등을 처리할 수 있습니다. 앱 인스턴스 식별자는 설치를 구분할 수 있으므로 분석 데이터를 완전한 익명 데이터라고 표현하지 않습니다. Firebase의 데이터 처리 방식은 <a href="https://firebase.google.com/support/privacy">Firebase 개인정보 보호 안내</a>와 <a href="https://firebase.google.com/docs/analytics/learn-more">Firebase Analytics가 수집하는 정보 안내</a>에서 확인할 수 있습니다.</p>
+        <p>설정에서 분석 공유를 끄면 데이닷이 새 분석 이벤트를 수집하지 않고 기기 내 분석 상태를 초기화합니다. 이미 Firebase에 수집된 데이터가 그 설정만으로 삭제되지는 않습니다. 기존 서비스 데이터의 삭제·보유는 Firebase 설정과 정책에 따라 처리됩니다.</p>
+
+        <h2 id="ads-ko">6. 광고와 UMP</h2>
+        <p>앱 유지 비용을 위해 Google Mobile Ads SDK 13.11.0과 Google UMP SDK 3.1.0을 사용합니다. 사진책에 기록이 최소 3개 이상 있을 때 한 번의 네이티브 푸터 광고가 표시될 수 있습니다. 전면 광고, 보상형 광고, 광고를 봐야 해제되는 잠금은 제공하지 않습니다.</p>
+        <p>매 실행에서 UMP 상태를 갱신·확인하고, Google의 지역별 판단에 따라 필요한 개인정보 메시지와 선택사항을 제공합니다. 광고 요청은 UMP가 허용(<code>canRequestAds</code>)할 때만 수행합니다. 광고는 항상 비개인맞춤 요청(<code>npa=1</code>)으로 구성하고, publisher first-party ID를 비활성화합니다. ATT 추적 허용 안내나 IDFA 권한 요청을 하지 않습니다. 개인정보 옵션이 필요한 사용자를 위해 앱 설정에 UMP 개인정보 옵션 진입점을 제공합니다.</p>
+        <p>비개인맞춤 광고는 광고 제공과 부정 사용 방지·측정을 위해 IP 주소, 대략적인 위치, 앱 또는 개발자 범위 식별자, 광고 노출·클릭, 제품 상호작용, 충돌·성능 및 기타 진단 정보를 처리할 수 있습니다. 비개인맞춤이라는 말은 데이터 처리가 전혀 없다는 뜻이 아닙니다. 일기 텍스트와 사진은 광고 타기팅에 보내지 않습니다. 광고가 허용되지 않거나 로드되지 않아도 일기와 사진책은 계속 사용할 수 있습니다. 자세한 내용은 <a href="https://developers.google.com/admob/ios/privacy/data-disclosure">Google AdMob iOS 데이터 공개 안내</a>와 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 확인해 주세요.</p>
+
+        <h2 id="providers-ko">7. 제공자와 해외 처리</h2>
+        <p>Apple은 기기 운영체제, PhotosPicker, 로컬 알림과 시스템 백업을 제공하고, Google/Firebase는 선택된 분석·광고 SDK를 제공합니다. GitHub는 사용자가 선택해 게시한 공개 지원 글을 호스팅합니다. Google/Firebase/GitHub와 Apple의 서비스는 사용자의 국가 밖에서 데이터를 처리할 수 있습니다. 각 서비스가 처리하는 범위와 국제 전송은 해당 제공자의 정책을 따릅니다.</p>
+        <ul>
+          <li><a href="https://firebase.google.com/support/privacy">Firebase 개인정보 보호 및 보안</a></li>
+          <li><a href="https://developers.google.com/admob/ios/privacy/data-disclosure">Google Mobile Ads 데이터 공개</a></li>
+          <li><a href="https://policies.google.com/privacy">Google 개인정보처리방침</a></li>
+          <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 개인정보처리방침</a></li>
+        </ul>
+
+        <h2 id="retention-ko">8. 보유와 삭제</h2>
+        <p>데이닷은 서비스 제공자마다 임의의 통합 보관 기간을 정해 보장하지 않습니다. 기기 내 기록과 사진은 사용자가 앱에서 삭제하거나 앱을 제거할 때까지 남고, iOS 백업·내보낸 파일·공유 서비스 사본은 각각의 저장 위치와 설정에 따릅니다. Analytics와 광고 제공자 데이터는 각 서비스의 설정과 정책에 따릅니다. 공개 GitHub 글은 사용자가 GitHub에서 공개한 게시물로서 GitHub의 정책과 사용자의 삭제 요청 경로를 따릅니다. 실제 이메일 문의는 답변과 처리에 필요한 동안 보관할 수 있습니다.</p>
+        <p>분석·광고 또는 문의와 관련한 삭제를 원하면 <a href="mailto:devGChobo@gmail.com">devGChobo@gmail.com</a>으로 요청해 주세요. 요청이 서비스 기록을 특정할 수 있도록 공개 이슈 URL, 문의 시점, 참조 가능한 식별자와 삭제 범위를 알고 있는 만큼 적어 주세요. 식별자가 없으면 어떤 서버 기록인지 확인하지 못하거나 삭제 완료를 확인하지 못할 수 있습니다. 기기 안에만 있는 기록은 운영자가 원격 삭제할 수 없습니다.</p>
+
+        <h2 id="contact-ko">9. 문의와 사용자 선택</h2>
+        <p>일반적인 오류와 사용 방법은 <a href="https://github.com/jhl1214/daydot-support/issues">daydot GitHub Issues</a>를 이용할 수 있습니다. 이슈는 공개되므로 개인정보나 금융 기록을 적지 마세요. 비공개 문의와 데이터 삭제 요청은 <a href="mailto:devGChobo@gmail.com">devGChobo@gmail.com</a>으로 보내 주세요. 문의에 답변하기 위해 사용자가 직접 제공한 이메일과 문의 내용은 이메일 제공자의 정책 및 답변 업무에 필요한 범위에서 처리될 수 있습니다. 문의를 통해 진단 파일이나 일기 데이터가 자동 업로드되는 기능은 없습니다.</p>
+
+        <h2 id="changes-ko">10. 방침 변경</h2>
+        <p>기능이나 데이터 처리 방식이 바뀌면 이 페이지의 내용과 시행일을 갱신합니다. 변경된 내용을 앱 또는 지원 페이지에서 확인할 수 있습니다. 현재 페이지의 시행일은 2026년 10월 20일입니다.</p>
+      </div>
+
+      <div class="language-panel" data-language-panel="en">
+        <div class="callout copper-callout"><strong>Reading note.</strong> This policy describes the current daydot journal, analytics, and advertising configuration.</div>
+        <nav class="policy-map" aria-label="Policy contents">
+          <a href="#local-en">1. Local records</a>
+          <a href="#backup-en">2. iOS backup</a>
+          <a href="#photos-en">3. Photos, reminders, sharing</a>
+          <a href="#network-en">4. Accounts and servers</a>
+          <a href="#analytics-en">5. Firebase Analytics</a>
+          <a href="#ads-en">6. Ads and UMP</a>
+          <a href="#providers-en">7. Providers and transfers</a>
+          <a href="#retention-en">8. Retention and deletion</a>
+          <a href="#contact-en">9. Contact and choices</a>
+          <a href="#changes-en">10. Changes</a>
+        </nav>
+
+        <h2 id="local-en">1. Local records</h2>
+        <p>Daydot is a journal for a photograph and a few words. Titles, memos, dates, annual-repeat choices, reminder settings, bookmarks, and photos you choose are stored on your device by default as JSON data and photo files. Creating, editing, deleting, and browsing by year or bookmark use the app’s local storage.</p>
+        <p>Daydot does not create an app account, automatically back up journal records to an operator server, or synchronize them with a server. The operator therefore cannot remotely read, restore, or delete records kept only on your device.</p>
+
+        <h2 id="backup-en">2. iOS device backup</h2>
+        <p>If iOS device backup is enabled, app data may be included according to your Apple settings and backup method. This is an operating-system backup, separate from a daydot server backup or app account. Deleting a record or removing daydot does not automatically remove an existing iOS backup, exported files and photos, or copies retained by a sharing service. Manage those locations through their own device, account, and service settings.</p>
+
+        <h2 id="photos-en">3. Photos, reminders, and sharing</h2>
+        <h3>Photo selection and saving</h3>
+        <p>Photos added to entries come only from items you choose in the iOS system PhotosPicker. The app does not automatically read your whole library or send your journal to a photo service. If you choose to save a finished photo card back to your library, an optional add-only photo permission may be requested. You can still write entries without it and view existing entries.</p>
+        <h3>Local reminders</h3>
+        <p>Reminders are optional local iOS notifications. Refusing or later disabling notification permission does not affect journal storage. Notification content and scheduling are handled on your device; daydot does not provide a server push-notification feature.</p>
+        <h3>Sharing you choose</h3>
+        <p>If you tap Share and select a destination, the selected photo card may be passed through the iOS share sheet to that service. The selected service handles the card under its own privacy policy and retention settings. Daydot does not upload or share journal content or photos without your choice.</p>
+
+        <h2 id="network-en">4. App accounts and server processing</h2>
+        <p>Daydot has no app login, app account, Firebase Authentication, Firebase Storage, or Firestore-based journal backup or sync. Ordinary entries and photos are not automatically sent to an operator server.</p>
+        <p>When you need help, the available routes are a public GitHub Issue or direct email. A GitHub Issue is public: information you enter can be published to GitHub and the public internet. Daydot has no separate support backend and does not automatically upload diagnostics. Do not post photos, journal or memo text, email addresses, account numbers, transaction records, or device backups in public issues.</p>
+
+        <h2 id="analytics-en">5. Firebase Analytics</h2>
+        <p>Daydot uses Firebase Analytics SDK 13.0.1 to improve feature usability and basic quality. The app records explicit screen and feature events; events may contain a feature category and a limited value such as whether the entry has a photo (<code>has_photo</code>).</p>
+        <p>Analytics events are configured to exclude journal memo or title text, photos, dates, UUIDs, search terms, and user IDs. Firebase and the operating system or SDK may still process an app-instance identifier, app/device/session information, and a coarse region derived from IP. An app-instance identifier can distinguish an installation, so analytics is not described as fully anonymous. See <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> and <a href="https://firebase.google.com/docs/analytics/learn-more">What Google Analytics for Firebase collects</a> for provider details.</p>
+        <p>Turning analytics sharing off in Settings stops new analytics collection by daydot and resets local analytics state. It does not automatically delete data already collected by Firebase. Existing service data is handled under Firebase’s settings and policies.</p>
+
+        <h2 id="ads-en">6. Advertising and UMP</h2>
+        <p>Daydot uses Google Mobile Ads SDK 13.11.0 and Google UMP SDK 3.1.0 to support maintenance. One native footer ad may appear in the photo book after at least three entries. There are no interstitials, rewarded ads, or ad walls.</p>
+        <p>On each launch, UMP refreshes and checks its state; Google determines by region whether a privacy message and choices apply. Ad requests run only when UMP allows them (<code>canRequestAds</code>). Requests are always non-personalized (<code>npa=1</code>) with publisher first-party ID disabled. The app does not request ATT tracking permission or IDFA permission. A required privacy-options entry point is available in app settings.</p>
+        <p>Non-personalized ads can still process IP address, coarse location, app- or developer-scoped identifiers, ad impressions and clicks, product interactions, crashes, performance, and other diagnostics for delivery, fraud prevention, and measurement. Non-personalized does not mean no data collection. Journal text and photos are not supplied for ad targeting. The journal and photo book remain usable if ads are not allowed or fail to fill. See <a href="https://developers.google.com/admob/ios/privacy/data-disclosure">Google AdMob iOS data disclosure</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+        <h2 id="providers-en">7. Providers and international processing</h2>
+        <p>Apple supplies the operating system, PhotosPicker, local notifications, and system backup. Google/Firebase supplies the selected analytics and advertising SDK services. GitHub hosts public support posts you choose to publish. Apple, Google/Firebase, and GitHub may process data outside your country. Each provider’s policy governs its processing scope and international transfers.</p>
+        <ul>
+          <li><a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a></li>
+          <li><a href="https://developers.google.com/admob/ios/privacy/data-disclosure">Google Mobile Ads data disclosure</a></li>
+          <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+          <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></li>
+        </ul>
+
+        <h2 id="retention-en">8. Retention and deletion</h2>
+        <p>Daydot does not promise one arbitrary retention period across every provider. On-device records and photos remain until you delete them in the app or remove the app; iOS backups, exported files, and copies held by sharing services follow their separate locations and settings. Analytics and advertising-provider data follow their service settings and policies. Public GitHub Issues are posts you chose to publish and follow GitHub’s policies and deletion routes. Direct email correspondence may be retained as needed to answer and handle the inquiry.</p>
+        <p>For deletion requests about analytics, advertising, or support, email <a href="mailto:devGChobo@gmail.com">devGChobo@gmail.com</a>. Include an issue URL, approximate time, available reference identifier, and requested scope so a service record can be located. Without an identifier, we may not be able to identify a server-side record or confirm deletion. The operator cannot remotely delete records kept only on your device.</p>
+
+        <h2 id="contact-en">9. Contact and your choices</h2>
+        <p>Use <a href="https://github.com/jhl1214/daydot-support/issues">daydot GitHub Issues</a> for general bugs and usage questions. Issues are public, so do not include personal information or financial records. For private questions and deletion requests, email <a href="mailto:devGChobo@gmail.com">devGChobo@gmail.com</a>. An email address or inquiry content that you provide directly may be handled under the email provider’s policy and as needed to answer the request. The app has no automatic diagnostic upload feature.</p>
+
+        <h2 id="changes-en">10. Changes</h2>
+        <p>We update this page and its effective date when features or data processing change. You can review changes in the app or support pages. This policy is effective October 20, 2026.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Lee Junho · <span class="copy-ko">데이닷 공식 지원</span><span class="copy-en">Official daydot support</span></p>
+    <div class="footer-links">
+      <a href="../"><span class="copy-ko">홈</span><span class="copy-en">Home</span></a>
+      <a href="../support/"><span class="copy-ko">지원</span><span class="copy-en">Support</span></a>
+      <a href="../app-privacy/"><span class="copy-ko">앱 개인정보 요약</span><span class="copy-en">App Privacy</span></a>
+    </div>
+  </footer>
+</body>
+</html>
